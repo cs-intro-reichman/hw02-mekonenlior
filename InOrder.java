@@ -4,6 +4,7 @@
  */
 public class InOrder {
 	public static void main (String[] args) {
-		//// Write your code here
-	}
+		int randomNum = (int)(Math.random() * 10);
+		System.out.println(randomNum);
+	}	
 }
