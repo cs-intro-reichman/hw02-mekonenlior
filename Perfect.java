@@ -3,6 +3,6 @@
  */
 public class Perfect {
 	public static void main (String[] args) {
-		//// Put your code here
+		int N = Integer.parseInt(args[0]);
 	}
 }
