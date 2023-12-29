@@ -5,6 +5,17 @@
  */
 public class OneOfEach {
 	public static void main (String[] args) {
-		//// Put your code here
+		double birth;
+		int sumOfChildren = 0;
+		do {
+			birth = Math.random();
+			if (birth <= 0.5) {
+				System.out.println("b");
+				sumOfChildren++;
+			} else {
+				System.out.println("g");
+				sumOfChildren++;
+			}
+		} while (true);
 	}
 }
