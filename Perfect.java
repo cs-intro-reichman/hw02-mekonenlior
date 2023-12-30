@@ -4,24 +4,20 @@
 public class Perfect {
 	public static void main (String[] args) {
 		int N = Integer.parseInt(args[0]);
-        int sumOfDivisors = 1; // Start with 1 as the first divisor
+        int sumOfDivisors = 0;
+        String divisors = "";
 
-        System.out.print(N + " is a perfect number since ");
-        System.out.print(N + " = 1");
-
-        // Print remaining divisors (excluding 1 and N) and calculate their sum
-        for (int i = 2; i <= N; i++) { // Loop up to N instead of N/2 + 1
+        for (int i = 1; i < N; i++) {
             if (N % i == 0) {
-                System.out.print(" + " + i);
                 sumOfDivisors += i;
+                divisors += i + " + ";
             }
         }
 
-        // Check for perfect number
         if (sumOfDivisors == N) {
-            System.out.println(".");
+            System.out.println(N + " is a perfect number since " + N + " = " + divisors);
         } else {
-            System.out.println(" but is not a perfect number.");
+            System.out.println(N + " is not a perfect number");
         }
 	}
 }

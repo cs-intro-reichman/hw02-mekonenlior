@@ -7,15 +7,19 @@ public class OneOfEach {
 	public static void main (String[] args) {
 		double birth;
 		int sumOfChildren = 0;
+		int boys = 0;
+		int girls = 0;
 		do {
 			birth = Math.random();
 			if (birth <= 0.5) {
 				System.out.println("b");
-				sumOfChildren++;
+				boys++;
 			} else {
 				System.out.println("g");
-				sumOfChildren++;
+				girls++;
 			}
-		} while (true);
+			sumOfChildren = boys + girls;
+		} while (boys < 1 || girls < 1);
+		System.out.println("You made it. . . and now you have " + sumOfChildren + " children");
 	}
 }
