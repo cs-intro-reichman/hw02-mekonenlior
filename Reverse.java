@@ -14,5 +14,6 @@ public class Reverse {
 
 		System.out.println(reversedWord);
 		System.out.println("The middle character is " + middleChar);
+		System.out.println("yes");
 	}
 }
