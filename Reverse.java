@@ -9,7 +9,7 @@ public class Reverse {
 		for (int i = word.length() - 1; i >= 0; i--) {
 			reversedWord += word.charAt(i);
 		}
-		int middleIndex = (word.length() / 2) - 1;
+		int middleIndex = word.length() / 2;
 		char middleChar = word.charAt(middleIndex);
 
 		System.out.println(reversedWord);
