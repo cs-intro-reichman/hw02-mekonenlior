@@ -11,8 +11,8 @@ public class Reverse {
             reversedWord += word.charAt(i);
         }
 
-        int middleIndex = word.length() / 2;
-        char middleChar = word.charAt(middleIndex);
+        int middleIndex = reversedWord.length() / 2;
+        char middleChar = reversedWord.charAt(middleIndex);
 
         System.out.println(reversedWord);
         System.out.println("The middle character is " + middleChar);
