@@ -12,6 +12,7 @@ public class OneOfEachStats {
 		// Gets the two command-line arguments
         int T = Integer.parseInt(args[0]);
         int seed = Integer.parseInt(args[1]);
+        Random generator = new Random(seed);
         // Initailizes a random numbers generator with the given seed value 
         int totalChildren = 0;
         int familiesWith2 = 0;
@@ -23,7 +24,7 @@ public class OneOfEachStats {
             int boys = 0;           
             int girls = 0;          
             do {
-                Random generator = new Random(seed); ;
+                
                 if (generator.nextDouble() <= 0.5) {
                     boys++;
                 } else {
