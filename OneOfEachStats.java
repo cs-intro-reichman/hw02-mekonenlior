@@ -14,18 +14,18 @@ public class OneOfEachStats {
         int seed = Integer.parseInt(args[1]);
         Random generator = new Random(seed);
 
-        int totalChildren = 0;
-        int familiesWith2 = 0;
-        int familiesWith3 = 0;
-        int familiesWith4OrMore = 0;
-        int mostCommonCount = 0;
-        int mostCommonNumberOfChildren = 0;
+        int totalChildren = 0; // Stores the total number of children across all simulated families.
+        int familiesWith2 = 0; // Counts families with 2 children.
+        int familiesWith3 = 0; // Counts families with 3 children.
+        int familiesWith4OrMore = 0; // Counts families with 4 or more children.
+        int mostCommonCount = 0; // Stores the highest count of families with a particular number of children.
+        int mostCommonNumberOfChildren = 0; // Stores the most common number of children.
 
-        for (int i = 1; i <= T; i++) {
+        for (int i = 1; i <= T; i++) { // Repeats the simulation for T families.
             int sumOfChildren = 0;    
             int boys = 0;           
             int girls = 0;          
-            do {
+            do { // Continues generating children until there's at least one boy and one girl.
                 if (generator.nextDouble() <= 0.5) {
                     boys++;
                 } else {
@@ -50,12 +50,12 @@ public class OneOfEachStats {
                 familiesWith4OrMore++;
                 if (familiesWith4OrMore > mostCommonCount) {
                     mostCommonCount = familiesWith4OrMore;
-                    mostCommonNumberOfChildren = 4; // Or more, as needed
+                    mostCommonNumberOfChildren = 4; // Or more, as needed.
                 }
             }
         }
 
-        double average = (double) totalChildren / T;
+        double average = (double) totalChildren / T; // Calculates the average number of children per family.
         System.out.println("Average: " + average + " children to get at least one of each gender.");
         System.out.println("Number of families with 2 children: " + familiesWith2);
         System.out.println("Number of families with 3 children: " + familiesWith3);
