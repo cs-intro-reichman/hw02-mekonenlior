@@ -6,6 +6,16 @@
  */
 public class OneOfEachStats1 {
 	public static void main (String[] args) {
+
+		/*
+  		# feedback:
+    		Code Structure:
+		Your code is well-structured and effectively calculates statistics about families. Good job!
+		Variable Naming:
+		Variable names are clear and descriptive, aiding in understanding the purpose of each variable. Well done!
+		Formatting:
+		Ensure consistent formatting and indentation to improve code readability. Your indentation appears inconsistent in some places.
+		*/
 		int T = Integer.parseInt(args[0]);
 		int totalChildren = 0;
         int familiesWith2 = 0;
