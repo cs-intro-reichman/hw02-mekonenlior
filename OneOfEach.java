@@ -9,6 +9,8 @@ public class OneOfEach {
 		int sumOfChildren = 0;
 		int boys = 0;
 		int girls = 0;
+
+		// # Feedback: Your code is well-indented, which aids readability. Good job!
 		do {
 			birth = Math.random();
 			if (birth <= 0.5) {
